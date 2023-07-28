@@ -1,2 +1,2 @@
 # shell-scripts
-Kishore preparing scripts
+Kishore prepared script
