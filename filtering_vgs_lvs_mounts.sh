@@ -1,4 +1,13 @@
 #!/bin/bash
+###########################################################################################################
+#About Script: This script can be used for view the Volume Groups, logical volume groups and mount points #
+#Author: Kishore Devkate                                                                                  #
+#Version of script : 1.0                                                                                  #
+#Details how to use the script:                                                                           #
+# at command promt : bash filename.sh vgcheck                                                             #
+#                    bash filename.sh lvcheck                                                             #
+#                    bash filename.sh mountcheck                                                          #
+###########################################################################################################
 case $1 in
         vgcheck)
                 echo "======================================"
