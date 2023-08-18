@@ -48,19 +48,19 @@ case $1 in
         ;;
          mountchk)
         echo " "
-        echo "Gathering Logical Volume Information"
+        echo "Gathering Mount Point Information"
         MNTCHK="$2"
         echo " "
         echo " "
         if [[ $MNTCHK == "" ]]; then
             echo "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
-            echo "You haven't entered any logical volume name, hence displaying all Logical Volumes present on the servers"
+            echo "You haven't entered any mount point name, hence displaying all mount points present on the servers"
             echo "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
             df -hTP |egrep -v 'tmpfs'
             echo "#######################################################################################################################"
         else
             echo "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
-            echo "####################################Displaying $MNTCHK Logical Volume Information###################################"
+            echo "####################################Displaying $MNTCHK Mount Point Information###################################"
             echo "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
             df -hTP |grep -w $MNTCHK
             echo " "
