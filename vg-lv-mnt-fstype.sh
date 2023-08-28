@@ -24,17 +24,17 @@ case $1 in
             vgdisplay $VGNAME 2> /dev/null
             echo " "
             AVBLVG=($(vgs | awk '{print $1}' | grep -v VG))
-        found=false
+         found=false
                 for vg_name in "${AVBVG[@]}"; do
-        if [[ "$MNTCHK" == "$vg_name" ]]; then
-        found=true
+         if [[ "$MNTCHK" == "$vg_name" ]]; then
+         found=true
         break
     fi
         done
 
-        if [[ "$found" == false ]]; then
-        echo " Does not exist provided input $VGNAME "
-fi
+         if [[ "$found" == false ]]; then
+         echo " Does not exist provided input $VGNAME "
+    fi
         fi
         ;;
     lvcheck)
@@ -103,8 +103,6 @@ mountchk)
 fi
 fi
     ;;
-
-
     *)
             echo -e " Please provide any one of the three below as a input which you desire \n 1) vgcheck \n 2) lvcheck \n 3) mountchk \n Provide sub input if you know such as vg name, lv name, partion name, mnt point name, fs type names after the above three input"
         ;;
